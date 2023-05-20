@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+</head>
+<body>
+<main>
+
+<div id='changeKeysForm'></div>
+
+<div class="panel">
+<div id='currentNote'></div>
+
+<div class="randomMusic">
+	<p style='margin:0'>Randomizer</p>
+	<button id='randomPlay'>Play ►</button>
+	<div style='display: flex; gap:7px; height:30px'>
+		<p style='margin:auto'>BPM</p>
+	<input id='randomSpeed' value='120' readonly>
+<div style='align-self:center'>
+	<div id='randomSpeedUp'>▲</div>
+	<div id='randomSpeedDown'>▼</div>
+</div>
+
+</div>
+	</div>
+
+<div class="screen">	
+<div class='octave'>
+	<button id="octaveDown">◄</button>
+	<p>Octave</p>
+	<button id="octaveUp">►</button>
+</div>	
+<div id="wave">
+	<div id="waveImg"></div>
+	<div >WaveForm</div>
+</div>
+</div>
+<div style='display: grid ; gap:5px;'>
+<div id="showNotes">
+<p>show notes</p>
+<div class="toggleContainer">	
+<div class="toggleCircle"></div>	
+</div>
+</div>
+<div id="showKeys">
+<p>show keys</p>
+<div class="toggleContainer">	
+<div class="toggleCircle"></div>
+</div>
+</div>
+<button id='changeKeys'>change keys</button>
+</div>
+
+</div>
+<div id="buttons">Loading ...</div>
+</main>
+<script src='main.js'></script>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

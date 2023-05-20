@@ -1,0 +1,305 @@
+
+
+body{
+	display: grid;
+	place-items:center;
+	height: 100vh;
+	font-family: 'Share Tech', sans-serif;
+	}
+
+.key{
+	width: 80px;
+	height: 500px;
+	background-color: white;
+	border-radius: 10px;
+	border: 1px solid #777;
+	border-bottom:5px solid grey;
+	z-index:0;
+	box-shadow: 1px 5px 3px #334;
+	font-weight: bold;
+	letter-spacing: 2px;
+	position: relative;
+
+}
+
+.keyboardKeys{
+	position:absolute;
+	top:85%;
+	border:2px solid black;
+	border-radius:3px;
+	font-size:12px;
+	width:20px;
+	height:20px;
+}
+
+.blackKey{
+	width: 40px;
+	height: 300px;
+	background-color: #668;
+	border-radius: 6px;
+	border-bottom:5px solid #448;
+	position: absolute;
+	margin-left:-20px;
+	z-index:10;
+	color:white;
+
+}
+
+.blackKeyClicked{
+	border: 1px solid #777;
+	margin-top: 5px;
+	filter: brightness(.8);
+	transition: .05s;
+}
+
+.whiteKeyClicked{
+	border-right:6px solid #999;
+	border-left:5px solid #999;
+	box-shadow: none;
+	transform: translateY(5px);
+	filter: brightness(.8);
+	transition: 0.05s;
+}
+
+main{
+	background-color: #778978;
+	padding: 10px;
+	border: 8px solid  #879994;
+	border-radius:20px;
+	outline:1px solid black;
+}
+
+.panel{
+	display: flex;
+	background-color: inherit;
+	height: 120px;
+	background-color: #778978;
+	border: 1px solid  #455;
+	border-radius:8px 8px 0 0;
+	margin-left:-10px;
+	margin-right:-10px;
+	position: relative;
+	z-index:12;
+	transform: translateY(10px); 
+	box-shadow: 1px 30px 20px rgba(1,1,55,.2);
+}
+
+.screen{
+	padding-left:5px; 
+	padding-right:5px; 
+	margin:  auto;
+	display: flex;
+	position: relative;
+	z-index:12;
+	justify-content: center;
+	gap: 20px;
+	height: 80%;
+	outline: 1px solid #558;
+	border-radius: 5px;
+	background-image:  linear-gradient(#778 , #7798);
+	border-top:5px solid #998899;
+	border-bottom:5px solid #778;
+	color:#222;
+	font-weight: bold;
+}
+
+.octave *{
+	background-color: transparent;
+	border: none;
+	align-self: center;
+}
+
+#octaveDown,#octaveUp{
+	font-size: 20px; 
+}
+
+#octaveDown:hover,
+#octaveUp:hover, 
+#randomSpeedUp:hover,
+#randomSpeedDown:hover{
+cursor: pointer;
+scale:1.5;
+}
+
+#octaveDown:active,
+#octaveUp:active,
+#randomSpeedUp:active,
+#randomSpeedDown:active{
+scale:1.2;
+opacity: .5;
+}
+
+.octave{
+	display: flex;
+}
+
+
+#wave{
+	cursor: pointer;
+	display: grid;
+	place-items:center;
+}
+
+#waveImg{
+	width: 55px;
+	height:55px;
+	background-repeat: no-repeat;
+	background-size: 100%;	
+}
+
+.toggleContainer{
+	width:40px;
+	height: 10px;
+	border-radius:16px;
+	background-color: #346;
+	padding: 3px;
+	border:1px solid black;
+}
+
+.toggleCircle{
+	background-color:  #679528;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	transition: .2s;
+}
+
+.toggleCircleClicked{
+	background-color:#617788;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	transform: translateX(30px);
+}
+
+#showNotes, #showKeys{
+	display: grid;
+	place-items:center;
+	font-weight: bold;
+	align-self: center;
+	margin-right: 4px;
+	cursor: pointer;
+}
+#showNotes p, #showKeys p{
+	margin:0; 
+}
+
+#currentNote{
+	align-self: center;
+    font-size: 100px;
+    position: absolute;
+    margin-left: 20px;
+}
+
+#changeKeys{
+	font-family: inherit;
+	font-weight: bold;
+	background-color: #778978;
+	border:3px solid #879994;
+	outline: 1px solid black;
+	border-radius: 3px;
+	cursor:pointer;
+	margin-right: 5px;
+	height: 20px;
+}
+
+
+li{
+	list-style: none;
+	display: flex;
+}
+
+li p, li input{
+	width: 30px;
+	height: 30px;
+	margin:0;
+	align-self: center;
+}
+
+#changeKeysForm ul{
+	padding: 0;
+	display: grid;
+	place-items:center;
+	grid-template-rows: repeat (5 , 1fr);
+	grid-template-columns:1fr 1fr;
+	gap: 10px;
+	width:214px;
+	font-size: 25px; 
+	position: absolute;
+	top:50px;
+	right: 50%;
+	margin-right: -107px;
+	z-index:100;
+	background-color: rgb(200,200,200);
+	padding: 15px;
+	border:1px solid black;
+	border-radius: 10px;
+
+
+}
+
+.changeKeysClose{
+	background-color: transparent;
+	border:1px solid black;
+	padding: 3px;
+	border-radius: 3px;
+	font-family: inherit;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.randomMusic{
+	border: 1px solid #455;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    height: 80px;
+    width: 125px;
+    align-self: center;
+    margin-left: 140px;
+}
+
+#randomSpeed{
+	width: 100%;
+	background-color: rgba(200,200,200,0.3);
+	border:1px solid black;
+	border-radius: 3px;
+	font-family: inherit;
+	font-size: 20px; 
+
+}
+
+#randomPlay{
+	background-color: transparent;
+	cursor: pointer;
+	border:1px solid black;
+	border-radius: 3px;
+	font-family: inherit;
+	font-weight: bold;
+}
+
+#randomPlay:hover, #changeKeys:hover, .changeKeysClose:hover{
+	scale:1.1;
+}
+
+@media ( max-width: 1172px){
+.key{
+	width: 70px;
+}
+.blackKey{
+	width: 35px;
+}
+}
+
+@media ( max-width: 1032px){
+.key{
+	width: 60px;
+	height: 400px;
+}
+.blackKey{
+	width: 30px;
+	height: 250px;
+}
+}
